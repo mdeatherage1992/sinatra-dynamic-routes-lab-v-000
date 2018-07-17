@@ -31,6 +31,6 @@ class App < Sinatra::Base
     @user_name = params[:name]
     "Hello #{@user_name}!"
   end
-  
-end
+
+
 end
