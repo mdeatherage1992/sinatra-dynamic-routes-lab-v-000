@@ -7,15 +7,10 @@ class App < Sinatra::Base
       "#{@user_name}"
     end
 
-  #   get "/hello/:name" do
-  #   @user_name = params[:name]
-  #   "Hello #{@user_name}!"
-  # end
-  #
-  # get "/square/:number" do
-  #   @user_name = params[:name]
-  #   "Hello #{@user_name}!"
-  # end
+  get "/square/:number" do
+    @number = params[:number].to_i ** 2
+    "Hello #{@user_name}!"
+  end
   #
   # get "/say/:number/:phrase" do
   #   @user_name = params[:name]
