@@ -11,11 +11,14 @@ class App < Sinatra::Base
     @number = params[:number].to_i ** 2
     "#{@number}"
   end
-  #
-  # get "/say/:number/:phrase" do
-  #   @user_name = params[:name]
-  #   "Hello #{@user_name}!"
-  # end
+
+  get "/say/:number/:phrase" do
+    @phrase = params[:phrase]
+    @number = params[:number].to_i
+    @number.times do
+      "{phrase}"
+    end
+  end
   #
   # get "/say/:word1/:word2/:word3/:word4/:word5" do
   #   @user_name = params[:name]
